@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GE Vernova Elektrik Şebekesi Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="open-tutorial" class="edu-btn">Eğitim</button>
+    <div id="game-container">
+        <div id="sidebar">
+            <img src="images (9).jpeg" alt="GE Vernova" id="ge-logo" />
+            <h2>Transformatör Envanteri</h2>
+            <button id="open-trafo-modal" class="trafo-select-btn">Transformatör Seç</button>
+            <div id="selected-trafo"></div>
+            
+            <div id="analysis-panel">
+                <h3>Maliyet & Verim Analizi</h3>
+                <div class="analysis-item">
+                    <span>Trafo Maliyeti:</span>
+                    <span id="transformer-cost">0 $</span>
+                </div>
+                <div class="analysis-item tooltip-container">
+                    <span>
+                        İletim Hattı Maliyeti
+                        <span class="tooltip-trigger">(i)</span>
+                        <div class="tooltip"></div>
+                    </span>
+                    <span id="line-cost">0 $</span>
+                </div>
+                <div class="analysis-item total">
+                    <span>TOPLAM MALİYET:</span>
+                    <span id="total-cost">0 $</span>
+                </div>
+                <hr>
+                <div class="analysis-item">
+                    <span>Güç Kaybı (İletim):</span>
+                    <span id="power-loss">0 MVA</span>
+                </div>
+                <div class="analysis-item">
+                    <span>Şebeke Verimliliği:</span>
+                    <span id="grid-efficiency">-%</span>
+                </div>
+            </div>
+        </div>
+        <div id="main-area">
+            <h2 id="map-title">Türkiye Elektrik Şebekesi Tasarımı</h2>
+            
+            <div id="map-selector">
+                <button class="map-btn active" data-map="turkey">Türkiye Haritası</button>
+                <button class="map-btn" data-map="world">Dünya Haritası</button>
+            </div>
+
+            <div id="map-wrapper">
+                <img id="background-map" src="" alt="Harita" />
+                <canvas id="game-map"></canvas> </div>
+            <div id="bottom-panel">
+                <button id="simulate-btn">Simüle Et</button>
+                <div id="results-wrapper" class="collapsed">
+                    <div id="results-header" title="Sonuçları Göster/Gizle">
+                        <h4>Simülasyon Sonuçları</h4>
+                        <button id="toggle-results-btn">▲</button>
+                    </div>
+                    <div id="status-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="trafo-modal" class="modal">
+        <div class="modal-content trafo-modal-content">
+            <span class="close-btn" id="close-trafo-modal">×</span>
+            <h3>Transformatör Seç</h3>
+            <div id="trafo-list"></div>
+        </div>
+    </div>
+    <div id="edu-modal" class="modal">
+        <div class="modal-content edu-modal-content">
+            <span class="close-btn" id="close-edu-modal">×</span>
+            <div id="edu-step"></div>
+            <button id="next-edu">İleri</button>
+        </div>
+    </div>
+    <div id="tutorial-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-tutorial">×</span>
+            <div id="tutorial-steps"></div>
+            <button id="next-tutorial">İleri</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
