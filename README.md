@@ -2,7 +2,11 @@
 
 Bu proje, GE'deki staj kapsamında geliştirilmiş interaktif bir HTML, CSS ve JavaScript tabanlı bir elektrik şebekesi simülasyon uygulamasıdır.
 
+**Uygulama Arayüzü**
 ![Uygulama Görüntüsü](ge_görsel.jpg)
+
+**Trafo Türleri**
+![Türkiye Haritası Görünümü](ge_görsel2.jpg)
 
 ## 🧾 Projenin Amacı
 
